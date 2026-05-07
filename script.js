@@ -102,3 +102,35 @@ addMotoForm.addEventListener('submit', (event) => {
     addMotoForm.reset();
     alert('Moto agregada: ' + nombre);
 });
+
+const diasEl = document.querySelector('#countdown-dias');
+const horasEl = document.querySelector('#countdown-horas');
+const minutosEl = document.querySelector('#countdown-minutos');
+const segundosEl = document.querySelector('#countdown-segundos');
+
+function updateCountdown() {
+    const FECHA_OFERTA = new Date('2026-06-30T00:00:00');
+    const now = new Date();
+    const diff = FECHA_OFERTA - now;
+
+    if (diff <= 0) {
+        diasEl.textContent = '00';
+        horasEl.textContent = '00';
+        minutosEl.textContent = '00';
+        segundosEl.textContent = '00';
+        return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    diasEl.textContent = days;
+    horasEl.textContent = hours;
+    minutosEl.textContent = minutes;
+    segundosEl.textContent = seconds;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);

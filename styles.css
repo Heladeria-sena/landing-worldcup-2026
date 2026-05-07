@@ -546,3 +546,33 @@ h1, h2, h3, h4 {
     border-color: white;
     color: white;
 }
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .dashboard {
+        flex-direction: column;
+    }
+
+    .cart-sidebar {
+        width: 100%;
+        position: static;
+        display: none;
+    }
+
+    .cart-sidebar.cart-visible {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .custom-form {
+        grid-template-columns: 1fr;
+    }
+    .oferta-content {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+}

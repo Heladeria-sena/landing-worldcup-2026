@@ -287,6 +287,30 @@
                         <button class="btn-add add-to-cart">Agregar al carrito</button>
                     </div>
                 </div>
+
+                <!-- FORMULARIO ADMIN -->
+            <div class="admin-panel">
+                <div class="admin-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                    <h3>Gestor de Inventario</h3>
+                </div>
+                <form id="add-moto-form" class="custom-form">
+                    <div class="input-group">
+                        <label for="moto-name">Modelo de la Moto</label>
+                        <input type="text" id="moto-name" placeholder="Ej: Aprilia Tuono V4" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="moto-price">Precio (USD)</label>
+                        <input type="number" id="moto-price" placeholder="Ej: 19000" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="moto-img">URL de la Imagen</label>
+                        <input type="url" id="moto-img" placeholder="https://..." required>
+                    </div>
+                    <button type="submit" class="btn-submit">Añadir al Catálogo</button>
+                </form>
+            </div>
+            
         </section>
     </main>
 

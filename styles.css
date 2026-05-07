@@ -129,3 +129,79 @@ h1, h2, h3, h4 {
     color: var(--text-muted);
     max-width: 500px;
 }
+
+/* OFERTA BANNER */
+.oferta-banner {
+    background: radial-gradient(circle at center, #2d1010 0%, #05070a 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem 5%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.oferta-banner::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: linear-gradient(45deg, #000 25%, transparent 25%),
+                      linear-gradient(-45deg, #000 25%, transparent 25%);
+    background-size: 4px 4px;
+    opacity: 0.2;
+    pointer-events: none;
+}
+
+.oferta-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.oferta-label {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.countdown-timer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.time-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 48px;
+}
+
+.time-block span {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+    text-shadow: 0 0 10px rgba(255, 0, 60, 0.3);
+}
+
+.time-block small {
+    font-size: 0.6rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+.separator {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--accent);
+    align-self: flex-start;
+    opacity: 0.5;
+}

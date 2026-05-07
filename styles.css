@@ -103,3 +103,29 @@ h1, h2, h3, h4 {
 .cart-badge.pulsando {
     animation: pulse-badge 0.4s ease;
 }
+
+/* HERO */
+.hero {
+    margin-top: 70px;
+    height: 350px;
+    background: linear-gradient(to right, #05070a 10%, rgba(5, 7, 10, 0.3)),
+                url('/img/Ducati Panigale V4.jpg') center/cover;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    border-bottom: 2px solid var(--accent);
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 500px;
+}
